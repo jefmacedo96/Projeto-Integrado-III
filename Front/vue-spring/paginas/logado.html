@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>UFC - PACCE/Crateús</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+		
+        <div id="app">
+		<div id="topo"> 
+			<img src="Cima.jpg" alt="some text"/>
+		</div>
+		
+		
+		
+		<header></header>
+		<input type="checkbox" id="chk">
+		<label for="chk" class="menu-icon">&#9776;</label>
+			
+		<div class="bg"></div>
+		<nav class="menu" id="principal">
+			<ul>
+				<li><a href="" class="voltar">Voltar</a></li>
+				<li><a href="logado.html">Apresentação</a></li>
+				<li><a href="adm.html">Meu Usuário</a></li>
+				<li><a href="#celula">Células Cooperativas <span>+</span></a></li>
+				<li><a href="#interacao">Interações Semanais <span>+</span></a></li>
+				<li><a href="#certificacao">Certificados <span>+</span></a></li>
+				</li>
+				<li><a href="cadastro.html">Cadastro de Monitores</a></li>
+				<li><a href="..\index.html">Sair</a></li>
+			</ul>
+		</nav>
+		
+		<nav class="menu" id="interacao"> 
+		<ul>
+			<li><a href="#" class="voltar">Voltar</a></li>
+			<li><a href="#">Ações Sociais</a></li>
+			<li><a href="#">Atividades Interativas</a></li>
+			<li><a href="#">Campanhas de Conscientização</a></li>
+			<li><a href="#">Visita às/das Escolas de Ensino Médio</a></li>
+		</ul>
+		</nav>
+		
+		<nav class="menu" id="celula"> 
+		<ul>
+			<li><a href="#" class="voltar">Voltar</a></li>
+			<li><a href="celulas20191 - logado.html">2019.1</a></li>
+			<li><a href="celulas20192 - logado.html">2019.2</a></li>
+		</ul>
+		</nav>
+		
+		<nav class="menu" id="certificacao"> 
+		<ul>
+			<li><a href="#" class="voltar">Voltar</a></li>
+			<li><a href="#">Célula Cooperativa</a></li>
+			<li><a href="#">Interação</a></li>
+			<li><a href="#">SEAC</a></li>
+		</ul>
+		</nav>
+		
+		<h2 align="center"><b> <font color=#191970> Seja bem-vindo! </font> </b></h2>
+		<div class="container">
+		<p align="justify">O Programa de Apredizagem Cooperativa em Células Estudantis é um programa de bolsas de monitoria da Escola Integrada de Desenvolvimento e Inovação Acadêmica da UFC que tem como principal objetivo colaborar para o aumento da taxa de conclusão nos cursos de graduação da UFC. A principal estratégia utilizada é a de difusão de Células Estudantis - grupos de estudo que utilizam a metodologia de Aprendizagem Cooperativa. <br>
+			<br>Para conhecer a história do PACCE e sua metodologia acesse o link abaixo: <br><br> <a href="http://www.pacce.ufc.br/pacce/metodologia">PACCE - Metodologia </a> ou <a href="https://www.youtube.com/watch?v=nJ7dlgJMyaQ"> assista o vídeo. </a></p>
+       
+			  <div class="container">
+			</div>
+			
+			</div>
+		</div>
+		
+		<div id="rodape" align="left">
+			<div align="left">
+				<img src="Baixo.png" alt="some text"/> 
+			</div>
+		</div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+				title: "Inscreva-se",
+                array: [],
+                valor: "",
+				senha: "",
+				title1: "Logue-se",
+                array: [],
+                valor: "",
+				senha: "",
+            },
+            methods: {
+                addValor(str) {
+                    if (str != "") {
+                        this.array.push(str);
+                    } else {
+                        alert("Insira um valor !!");
+                    }
+                },
+				 addSenha(str) {
+                    if (str != "") {
+                        this.array.push(str);
+                    } else {
+                        alert("Insira um valor !!");
+                    }
+                },
+                removeValor(str) {
+                    if (str != "") {
+                        var index = this.array.indexOf(str);
+
+                        if (index != -1) {
+                            this.array.splice(index, 1);
+                        } else {
+                            alert("Item não existe !!");
+                        }
+                    } else {
+                        alert("Insira um valor !!");
+                    }
+
+                }
+            }
+        });
+    </script>
+	
+	<style>
+	img {
+	max-width: 100%;
+	}
+	#topo{
+	width: 100%;
+	height: 26%;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #0A246A;
+	background-position:center center;
+	background-color:skyblue;
+}
+	
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		width:100%;
+	}
+	
+	
+* {
+	margin:0;
+	padding:0;
+	}
+
+header{
+	width: 100%;
+
+	left:0;
+	background-color: #5b859a;
+	}
+	
+	.menu-icon{
+	
+		font-size: 25px;
+		font-weight: bold;
+		padding: 5px;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		background-color: #696969;
+		color: #fff;
+		cursor: pointer;
+		transition: all .4s;
+		left: 300px;
+	
+		}
+		
+	.menu-icon:hover{
+		background-color: #fff;
+		color: #87ceeb;
+		}
+	
+	#chk{
+		display: none;
+		}
+	
+	.menu{
+	
+		height: 100%;
+		position: absolute;
+		background-color: #fff;
+		overflow: hidden;
+		transition: all .2s;
+		
+	}
+	
+	#principal{
+		width: 300px;
+		left: -300px;
+	}
+	
+	ul{
+		list-style: none;
+	}
+	
+	ul li a{
+		display: block;
+		font-size: 18px;
+		font-family: 'Arial';
+		padding: 10px;
+		border-bottom: solid 1px #000;
+		color: #000;
+		text-decoration: none;
+		transition: all .2s;
+	}
+	
+	ul li span{
+		float: right;
+		padding-right: 10px;	
+	}
+	
+	ul li a:hover{
+		background-color: #87ceeb;
+	}
+	
+	.voltar{
+		background-color: #c0c0c0;
+		border-left: solid 5px #444;
+	}
+	
+	.bg{
+		width: 100%;
+		height: 100%;
+		left:0;
+		top:0;
+		position: fixed;
+		background-color: rgba(0,0,0,.6);
+		display: none;
+	}
+	
+	#chk:checked ~.bg{
+		display: block;
+		}
+		
+	#chk:checked ~ #principal{
+		transform: translateX(300px);
+		}
+		
+	#certificacao,
+	#interacao,	
+	#celula{
+		width:250px;
+		left:-250px;
+	}
+	
+	#certificacao:target,
+	#interacao:target,
+	#celula:target {
+		transform: translateX(250px);
+		box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
+		}
+	
+	#rodape {
+	position: fixed;
+	bottom: 0px;
+	}
+	
+	</style>
+</body>
+
+</html>
