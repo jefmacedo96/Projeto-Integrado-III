@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Células Cooperativas - 2019.1 - PACCE/Crateús</title>
+    <title>Login - PACCE/UFC/Crateús</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/jquery.min.js"></script>
@@ -30,16 +30,13 @@
 			
 		<div class="bg"></div>
 		<nav class="menu" id="principal">
-		<ul>
+			<ul>
 				<li><a href="" class="voltar">Voltar</a></li>
-				<li><a href="logado.html">Apresentação</a></li>
-				<li><a href="adm.html">Meu Usuário</a></li>
+				<li><a href="..\index.html">Apresentação</a></li>
 				<li><a href="#celula">Células Cooperativas <span>+</span></a></li>
 				<li><a href="#interacao">Interações Semanais <span>+</span></a></li>
 				<li><a href="#certificacao">Certificados <span>+</span></a></li>
-				</li>
-				<li><a href="..\curso-insert.html">Cadastro de Monitores</a></li>
-				<li><a href="..\index.html">Sair</a></li>
+				<li><a href="login.html">Login</a></li>
 			</ul>
 		</nav>
 		
@@ -56,8 +53,8 @@
 		<nav class="menu" id="celula"> 
 		<ul>
 			<li><a href="#" class="voltar">Voltar</a></li>
-			<li><a href="celulas20191 - logado.html">2019.1</a></li>
-			<li><a href="celulas20192 - logado.html">2019.2</a></li>
+			<li><a href="celulas20191.html">2019.1</a></li>
+			<li><a href="celulas20192.html">2019.2</a></li>
 		</ul>
 		</nav>
 		
@@ -69,13 +66,15 @@
 			<li><a href="#">SEAC</a></li>
 		</ul>
 		</nav>
-		
-		<h2 align="center"><b> <font color=#000000> Célula Cooperativa de Álgebra Linear</font> </b></h2>
-		<h4 align="center"><b> <font color=#191970> 2019.1 </font> </b></h4><br>
 		<div class="container" align="center">
-		<p align="center">Adicione Cerficado:</p><br>
-				
+
+			<h2 align='center'><font color=#191970>Escolha qual Login deseja fazer:</font></h6><br>
+			
+			<button><a href="loginadm.html" url="lista_laboratorial.php"><h3>Comissão do PACCE</h3></a></button>
+			<button><a href="#" url="lista_laboratorial.php"><h3>Articulador do PACCE</h3></a></button>
+		</div>	
 			  <div class="container">
+			  <br><h6 align='center'>Login apenas para bolsistas do PACCE!</h6>
 			</div>
 			
 			</div>
@@ -131,6 +130,26 @@
             }
         });
     </script>
+	
+	<script>
+		function enviarDados(){
+			var matricula = document.getElementById("matricula").value;
+			var senha = document.getElementById("senha").value;
+			
+			
+
+
+					if(matricula.length <= 5 || matricula.length > 6 || matricula != '431513')
+						alert('matricula invalida');
+					else{
+						if(senha <= 3 || senha != '1234')
+							alert('Sua senha deve ter pelo menos 4 caracteres ou está errada');
+						else
+							alert('Login realizado com sucesso!');
+						}
+				}
+		
+	</script>
 	
 	<style>
 	img {
